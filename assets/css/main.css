@@ -548,6 +548,7 @@ hr {
 
 .navbar {
   padding: 0;
+  background-color: white
 }
 
 .navbar li.active a.nav-link {
