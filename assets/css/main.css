@@ -660,7 +660,11 @@ hr {
   color: #fff;
   overflow: hidden;
   position: relative;
-  background: url(../img/hero-bg.png);
+  background: url(../img/b.jpg); 
+    background-attachment: fixed ;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-position: center;
 }
 
 #hero-area .contents {
@@ -668,7 +672,7 @@ hr {
 }
 
 #hero-area .contents .head-title {
-  color: #585b60;
+  color: white;
   text-transform: uppercase;
   font-size: 30px;
   line-height: 48px;
@@ -1908,7 +1912,7 @@ textarea {
 
 
 .copyright .footer-logo img {
-  width: 80%;
+  width: 40%;
 }
 
 .copyright p {
