@@ -656,7 +656,7 @@ hr {
 /* ==========================================================================
 3. Hero Area
 ========================================================================== */
-#hero-area {
+/*#hero-area {
   color: #fff;
   overflow: hidden;
   position: relative;
@@ -669,15 +669,41 @@ hr {
 
 #hero-area .contents {
   padding: 170px 0px 50px;
+}*/
+
+#hero-area {
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  background: url(../img/b.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#hero-area .contents {
+  padding: 200px 0px 200px;
 }
 
 #hero-area .contents .head-title {
   color: white;
   text-transform: uppercase;
-  font-size: 30px;
-  line-height: 48px;
+  font-size: 36px;
+  line-height: 120px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+}
+
+.feature-content ul {
+  padding-left: 15px;
+}
+
+b{
+  color:#222222;
+}
+.feature-content ul li {
+  list-style: circle;
 }
 
 /* Team Item */
