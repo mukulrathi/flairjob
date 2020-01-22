@@ -1514,6 +1514,13 @@ hr {
   background: url(../img/testimonial.jpg);
 }
 
+.founder {
+  background: #34363a;
+  position: relative;
+  background: url(../img/testimonial.jpg);
+}
+
+
 .testimonial .section-title {
   color: #fff;
 }
