@@ -678,7 +678,7 @@ hr {
   background: url(../img/b.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
