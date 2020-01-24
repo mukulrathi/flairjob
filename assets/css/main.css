@@ -663,9 +663,8 @@ hr {
   background: url(../img/b.jpg); 
     background-attachment: fixed ;
     background-repeat: no-repeat;
-    background-size:contain;
-  background-position: 0 30px;
-
+    background-size:100% 100%;
+    background-position: center;
 }
 
 #hero-area .contents {
