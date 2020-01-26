@@ -95,7 +95,7 @@ a:not([href]):not([tabindex]) {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: rgba(15, 17, 27, 0.8);
+  background: #014c8d;
 }
 
 .btn {

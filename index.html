@@ -25,10 +25,32 @@
     <!-- Main Style -->
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Responsive Style -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
-
+    <link rel="stylesheet" href="assets/css/responsive.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    /*
+        (function(){
+           emailjs.init('user_DHW6B1H0E9xE0u4lb8dyA');
+        })();
+        */
+    </script>
+    <script type="text/javascript">
+    /*
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate the contact number value
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('gmail', 'placement', this);
+            });
+        }
+        */
+    </script>
 </head>
-
+<style>
+.bgs{
+    background-color: #014c8d;
+}
+</style>
 <body>
 
 <!-- Header Area wrapper Starts -->
@@ -226,7 +248,7 @@
 
 <!-- Services Section Start -->
 <section id="services" class="section-padding bg-gray section">
-    <div class="container">
+    <div class="container ">
 
         <div class="section-header text-center">
             <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Recruitment Services </h2>
@@ -235,7 +257,7 @@
             </p>
         </div>
 
-        <div class="row services-item wow fadeInRight animated">
+        <div class="row services-item wow fadeInRight animated bgs">
             <div class="col-lg-12 col-md-12 col-xs-12 info wow fadeInLeft" data-wow-delay="0.3s">
                 <div class="site-heading">
                     <img class="img-fluid m-5" src="assets/img/rec.jpg" alt="" style="float: right;">
@@ -273,9 +295,9 @@
 
             </div>
         </div>
-        <div class="row services-item wow fadeInRight animated">
+        <div class="row services-item wow fadeInRight animated bgs">
             <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.3s">
-                <img class="img-fluid m-5" src="assets/img/clem-onojeghuo-fY8Jr4iuPQM-unsplash.jpg" alt="">
+                <img class="img-fluid m-5" src="assets/img/hr-outsourcing.jpg" alt="hr-outsourcing">
             </div>
             <div class="col-lg-6 col-md-12 col-xs-12 info wow fadeInRight" data-wow-delay="0.3s">
                 <div class="site-heading">
@@ -306,7 +328,7 @@
             </div>
         </div>
 
-        <div class="row services-item wow fadeInRight animated">
+        <div class="row services-item wow fadeInRight animated bgs">
             <div class="col-lg-6 col-md-12 col-xs-12 info wow fadeInLeft" data-wow-delay="0.3s">
                 <div class="site-heading">
                     <h2 class="section-title p-1">PAYROL<span>Management</span></h2>
@@ -321,11 +343,11 @@
             </div>
 
             <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
-                <img class="img-fluid" src="assets/img/about/img-1.jpg" alt="">
+                <img class="img-fluid" src="assets/img/payrole.jpg" alt="">
             </div>
         </div>
 
-        <div class="row services-item wow fadeInRight animated">
+        <div class="row services-item wow fadeInRight animated bgs">
             <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.3s">
                 <img class="img-fluid m-5" src="assets/img/counselling.jpg" alt="">
             </div>
@@ -345,7 +367,7 @@
             </div>
         </div>
 
-        <div class="row services-item wow fadeInRight animated">
+        <div class="row services-item wow fadeInRight animated bgs">
 
             <div class="col-lg-6 col-md-12 col-xs-12 info wow fadeInLeft" data-wow-delay="0.3s">
                 <div class="site-heading">
@@ -376,9 +398,9 @@
         </div>
 
 
-        <div class="row services-item wow fadeInRight animated">
+        <div class="row services-item wow fadeInRight animated bgs">
             <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.3s">
-                <img class="img-fluid" src="assets/img/about/img-1.jpg" alt="">
+                <img class="img-fluid" src="assets/img/verify.jpeg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-xs-12 info wow fadeInRight" data-wow-delay="0.3s">
                 <div class="site-heading">
@@ -517,16 +539,18 @@
 <!-- Clients Section End -->
 
 <!-- Contact Section Start -->
-<section id="contact" class="section-padding">
-    <div class="container">
+<section id="contact" >
+        <img src="assets/img/contact.jpg" alt="" class="img-responsive" height="470px" width="100%">
+  <div class="container section-padding">
         <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">
             <div class="col-md-6 col-lg-6 col-sm-12">
                 <div class="contact-block">
-                    <form id="contactForm">
+                    <form id="contact-form">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name"
+                                    <input type="hidden" name="contact_number">
+                                    <input type="text" class="form-control" id="name" name="from_name" placeholder="Name"
                                            required
                                            data-error="Please enter your name">
                                     <div class="help-block with-errors"></div>
@@ -534,23 +558,16 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Email" id="email" class="form-control" name="email"
+                                    <input type="email" placeholder="Email" id="email" class="form-control" name="reply_to"
                                            required
                                            data-error="Please enter your email">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
+                           
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Subject" id="msg_subject" class="form-control"
-                                           required
-                                           data-error="Please enter your subject">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Your Message" rows="5"
+                    <textarea class="form-control" id="message" placeholder="Your Message" rows="5"name ="message_html"
                               data-error="Write your message" required></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
@@ -564,7 +581,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-6 col-sm-12">
+            <div class="col-md-6 col-lg-6 col-sm-12"  >
                 <div class="contact-right-area wow fadeIn">
                   
                     <h2>Contact Us</h2>
@@ -606,9 +623,6 @@
             </div>
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="social-icon text-center">
-                    <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-                    <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
-                    <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
                     <a class="linkedin" href="https://linkedin.com/in/smrutigore"><i
                             class="lni-linkedin-filled"></i></a>
                 </div>
@@ -645,8 +659,34 @@
 <script src="assets/js/waypoints.min.js"></script>
 <script src="assets/js/jquery.slicknav.js"></script>
 <script src="assets/js/main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    
 
-
+<script>
+$('#contact-form').on('submit', function(event) {
+    event.preventDefault(); // prevent reload
+    
+    var formData = new FormData(this);
+    formData.append('service_id', 'gmail');
+    formData.append('template_id', 'placement');
+    formData.append('user_id', 'user_DHW6B1H0E9xE0u4lb8dyA');
+ 
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false, // auto-detection
+        processData: false,
+        success:function(){
+            swal('Mail send successfully').then(function(){
+                $("#contact-form")[0].reset();
+        });
+        },
+        error:function(){
+            swal('Error in sendinf Mail')
+        }
+        // no need to parse formData to string
+    })
+})</script>
 </body>
 
 </html>
