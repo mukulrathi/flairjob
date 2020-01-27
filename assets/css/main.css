@@ -73,10 +73,10 @@ a:not([href]):not([tabindex]) {
 }
 
 .section-title {
-  font-size: 30px;
-  color: #222222;
+  font-size: 32px;
+  color: #014c8d;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 900;
   text-transform: uppercase;
   position: relative;
 }
@@ -95,7 +95,7 @@ a:not([href]):not([tabindex]) {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #014c8d;
+  background: rgba(15, 17, 27, 0.8);
 }
 
 .btn {
@@ -489,11 +489,11 @@ hr {
 
 .top-nav-collapse .navbar-nav .nav-link:hover {
   cursor: pointer;
-  color: #3d60f4 !important;
+  color: #014c8d !important;
 }
 
 .top-nav-collapse .navbar-nav li.active a.nav-link {
-  color: #3d60f4 !important;
+  color: #014c8d !important;
 }
 
 .indigo {
