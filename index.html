@@ -425,7 +425,19 @@
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-
+                                       <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" required placeholder="Job Title" id="title" class="form-control" name="job_title" required data-error="Please enter job Title">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                              <div class="col-md-6">
+                                        <div class="form-group">
+                                          
+                                            <input type="number" class="form-control" id="name" name="form_mobile" placeholder="Mobile" required data-error="Please enter your Mobile Number">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <textarea class="form-control" id="message" required placeholder="Your Message" rows="5" name="message_html" data-error="Write your message" required></textarea>
@@ -527,9 +539,9 @@
                 event.preventDefault(); // prevent reload
 
                 var formData = new FormData(this);
-                formData.append('service_id', 'gmail');
-                formData.append('template_id', 'placement');
-                formData.append('user_id', 'user_DHW6B1H0E9xE0u4lb8dyA');
+                formData.append('service_id', 'smtp_server');
+                formData.append('template_id', 'template_UO1hW4xZ');
+                formData.append('user_id', 'user_4n4qP2Hvw27gleu0itnvM');
 
                 $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
                     type: 'POST',
